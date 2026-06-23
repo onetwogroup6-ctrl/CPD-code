@@ -1,0 +1,350 @@
+<style>
+/* Main Layout */
+.programme-section{
+    max-width:1200px;
+    margin:0 auto;
+    font-family:Arial, sans-serif;
+    color:#555;
+}
+
+.programme-grid{
+    display:grid;
+    grid-template-columns:2fr 320px;
+    gap:30px;
+}
+
+/* Headings */
+.section-title{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#9aa1ab;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.objectives{
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+/* Outcomes */
+.outcomes-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0 30px;
+    margin-bottom:50px;
+}
+
+.outcome-item{
+    padding:12px 0;
+    border-bottom:1px solid #ececec;
+    font-size:13px;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.outcome-item:before{
+    content:"›";
+    color:#3499cc;
+    font-weight:bold;
+}
+
+/* Sidebar */
+.info-card{
+    border:2px solid #ddd;
+    padding:25px;
+    background:#fff;
+    height:fit-content;
+}
+
+.intake{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.intake small{
+    color:#999;
+    display:block;
+}
+
+.intake strong{
+    font-size:20px;
+}
+
+.apply-btn{
+    display:block;
+    width:100%;
+    background:#0077b6;
+    color:#fff !important;
+    text-align:center;
+    padding:14px;
+    text-decoration:none;
+    border-radius:10px
+    font-weight:600;
+    margin:20px 0;
+}
+
+.apply-btn:hover{
+    background:#005f92;
+}
+
+.info-row{
+    margin-bottom:15px;
+    font-size:13px;
+}
+
+.info-row strong{
+    display:block;
+    color:#555;
+    margin-bottom:3px;
+}
+
+.info-row span{
+    color:#888;
+}
+
+/* Schedule */
+.schedule-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.schedule-table tr{
+    border:1px solid #ececec;
+}
+
+.schedule-table td{
+    padding:15px;
+    font-size:13px;
+}
+
+.schedule-table tr:nth-child(even){
+    background:#f7f7f7;
+}
+
+/* Upcoming Dates */
+.date-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:20px;
+}
+
+.date-card{
+    border:1px solid #ddd;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.date-card strong{
+    font-size:15px;
+}
+
+.status{
+    background:#d9f5df;
+    color:#3cae5b;
+    border:1px solid #a7e6b5;
+    padding:4px 12px;
+    border-radius:50px;
+    font-size:12px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.programme-grid{
+    grid-template-columns:1fr;
+}
+
+.outcomes-grid{
+    grid-template-columns:1fr;
+}
+
+.date-grid{
+    grid-template-columns:1fr;
+}
+
+}
+</style>
+
+<div class="programme-section">
+
+    <div class="programme-grid">
+
+        <!-- LEFT CONTENT -->
+        <div>
+
+            <div class="section-title">
+                Programme Objectives
+            </div>
+
+            <div class="objectives">
+                By the end of the programme, delegates will have a solid understanding of project management principles,
+                including the Project Management Body of Knowledge (PMBOK) specific to construction, practical use of
+                MS Projects, construction project cash flow, and risk factors in construction projects.
+            </div>
+
+            <div class="section-title">
+                Programme Outcomes
+            </div>
+
+            <div class="outcomes-grid">
+
+                <div class="outcome-item">Introduction to Construction Project Management body of knowledge (PMBOK)</div>
+                <div class="outcome-item">Project Management</div>
+
+                <div class="outcome-item">Commercial & Construction contracts law</div>
+                <div class="outcome-item">Property Economics, Budgets and Life Cycle Costing</div>
+
+                <div class="outcome-item">Feasibility studies & investment</div>
+                <div class="outcome-item">Construction Contracts Law</div>
+
+                <div class="outcome-item">Construction & Professional insurance</div>
+                <div class="outcome-item">Estimation of construction cost</div>
+
+                <div class="outcome-item">Tendering Procedures</div>
+                <div class="outcome-item">Variation orders, interim certificates & final accounts</div>
+
+                <div class="outcome-item">Cash Flow Projections</div>
+                <div class="outcome-item">Utilisation of Subcontractors</div>
+
+                <div class="outcome-item">Site Management, plant & equipment</div>
+                <div class="outcome-item">Total Quality Management</div>
+
+                <div class="outcome-item">Risk Management</div>
+                <div class="outcome-item">Communication</div>
+
+                <div class="outcome-item">Marketing and Public Relations</div>
+                <div class="outcome-item">Public Private Partnerships</div>
+
+                <div class="outcome-item">Stakeholder Engagement</div>
+                <div class="outcome-item">Strategic Goal Alignment</div>
+
+                <div class="outcome-item">Predictive Maintenance</div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="info-card">
+
+            <div class="intake">
+                <small>Next Intake</small>
+                <strong>21 – 23 October 2026</strong>
+            </div>
+
+            <a href="#" class="apply-btn">Apply now</a>
+
+            <div class="info-row">
+                <strong>Coordinator:</strong>
+                <span>Career Excel Academy</span>
+            </div>
+
+            <div class="info-row">
+                <strong>SAPOA Members:</strong>
+                <span>R11 550</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Online:</strong>
+                <span>R9 950</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Non-SAPOA:</strong>
+                <span>R11 950</span>
+            </div>
+
+            <div class="info-row">
+                <strong>ECSA CPD:</strong>
+                <span>3.0 Credits</span>
+            </div>
+
+            <div class="info-row">
+                <strong>SACPCMP CPD:</strong>
+                <span>2.10 Credits</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SCHEDULE -->
+    <div style="margin-top:50px;">
+
+        <div class="section-title">
+            Daily Time Schedule
+        </div>
+
+        <table class="schedule-table">
+
+            <tr>
+                <td width="18%">08:15 – 10:15</td>
+                <td>Lecture Session One</td>
+            </tr>
+
+            <tr>
+                <td>10:15 – 10:30</td>
+                <td>Break</td>
+            </tr>
+
+            <tr>
+                <td>10:30 – 12:30</td>
+                <td>Lecture Session Two</td>
+            </tr>
+
+            <tr>
+                <td>12:30 – 13:15</td>
+                <td>Lunch Break</td>
+            </tr>
+
+            <tr>
+                <td>13:15 – 14:45</td>
+                <td>Lecture Session Three</td>
+            </tr>
+
+            <tr>
+                <td>14:45 – 15:00</td>
+                <td>Break</td>
+            </tr>
+
+            <tr>
+                <td>15:00 – 16:30</td>
+                <td>Lecture Session Four</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- DATES -->
+    <div style="margin-top:50px;">
+
+        <div class="section-title">
+            Upcoming Dates
+        </div>
+
+        <div class="date-grid">
+
+            <div class="date-card">
+                <strong>10 – 12 June 2026</strong>
+                <span class="status">Open</span>
+            </div>
+
+            <div class="date-card">
+                <strong>21 – 23 October 2026</strong>
+                <span class="status">Open</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
