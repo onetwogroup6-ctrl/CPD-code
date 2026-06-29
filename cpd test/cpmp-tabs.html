@@ -8,43 +8,40 @@
   background: #fff;
 }
 
-/* ===== TABS NAVIGATION ===== */
+/* ===== TABS NAVIGATION (ROUNDED, NO UNDERLINE) ===== */
 .cpmp-tabs-nav {
   display: flex;
-  gap: 5px;
-  border-bottom: 2px solid #e2e8f0;
+  gap: 10px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cpmp-tab-button {
-  padding: 14px 28px;
-  background: #f7fafc;
+  padding: 12px 25px;
+  background: transparent;
   border: none;
-  border-bottom: 3px solid transparent;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
-  color: #4a5568;
+  color: #718096;
   transition: all 0.2s ease;
-  margin-bottom: -2px;
+  border-radius: 25px;
 }
 
 .cpmp-tab-button:hover {
-  background: #edf2f7;
-  color: #1a202c;
+  background: #f7fafc;
+  color: #2d3748;
 }
 
 .cpmp-tab-button.active {
-  background: #fff;
-  border-bottom-color: #0073b1;
-  color: #0073b1;
+  background: #0073b1;
+  color: #ffffff;
 }
 
 /* ===== TAB CONTENT ===== */
 .cpmp-tab-content {
   display: none;
-  padding: 0 15px;
 }
 
 .cpmp-tab-content.active {
@@ -60,15 +57,11 @@
 /* ===== LAYOUT GRID ===== */
 .cpmp-grid {
   display: grid;
-  grid-template-columns: 2fr 320px;
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
 .cpmp-main-content {
-  min-width: 0;
-}
-
-.cpmp-sidebar {
   min-width: 0;
 }
 
@@ -344,156 +337,6 @@
   font-weight: 600;
 }
 
-/* ===== SIDEBAR ===== */
-.cpmp-sidebar-card {
-  border: 1px solid #edf2f7;
-  border-radius: 4px;
-  padding: 25px;
-  background: #fff;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.intake-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.intake-title {
-  display: block;
-  font-size: 14px;
-  color: #4a5568;
-  margin-bottom: 8px;
-}
-
-.intake-date {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  color: #1a202c;
-}
-
-.btn-primary {
-  display: block;
-  width: 100%;
-  background: #0073b1;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px;
-  border-radius: 4px;
-  font-size: 15px;
-  font-weight: 700;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  margin: 20px 0;
-  transition: background 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: #00598a;
-}
-
-.sidebar-meta-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  border-top: 1px solid #edf2f7;
-  padding-top: 20px;
-}
-
-.meta-list-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.meta-list-label {
-  font-size: 13px;
-  font-weight: 700;
-  color: #2d3748;
-  margin-bottom: 4px;
-}
-
-.meta-list-value {
-  font-size: 13px;
-  color: #718096;
-  line-height: 1.4;
-}
-
-/* ===== FORM ===== */
-.form-card-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1a202c;
-  margin: 0 0 8px 0;
-}
-
-.form-card-subtitle {
-  font-size: 13px;
-  color: #718096;
-  margin: 0 0 20px 0;
-}
-
-.sidebar-form .form-group {
-  margin-bottom: 15px;
-}
-
-.sidebar-form .form-control {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #cbd5e0;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #4a5568;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-.sidebar-form .form-control::placeholder {
-  color: #a0aec0;
-}
-
-.sidebar-form .form-control:focus {
-  border-color: #0073b1;
-}
-
-/* ===== DOWNLOADS ===== */
-.download-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.download-item {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: 14px;
-  color: #0073b1;
-  padding: 8px 0;
-  transition: transform 0.2s ease;
-}
-
-.download-item:hover {
-  transform: translateX(5px);
-}
-
-.download-item:hover .download-text {
-  text-decoration: underline;
-}
-
-.pdf-icon {
-  background: #fff5f5;
-  color: #e53e3e;
-  border: 1px solid #fed7d7;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 3px;
-  margin-right: 12px;
-  flex-shrink: 0;
-}
-
 /* ===== COORDINATOR CARDS ===== */
 .coordinator-section {
   margin: 30px 0;
@@ -558,12 +401,6 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 991px) {
-  .cpmp-grid {
-    grid-template-columns: 1fr;
-  }
-  .cpmp-sidebar {
-    margin-top: 30px;
-  }
   .fees-grid {
     grid-template-columns: 1fr;
   }
@@ -572,23 +409,13 @@
 @media (max-width: 768px) {
   .cpmp-tabs-nav {
     flex-direction: column;
-    gap: 0;
-    border-bottom: none;
-    border-right: 2px solid #e2e8f0;
-    margin-bottom: 20px;
+    gap: 5px;
   }
   .cpmp-tab-button {
-    border-bottom: none;
-    border-right: 3px solid transparent;
-    padding: 12px 20px;
-    text-align: left;
     width: 100%;
+    text-align: center;
   }
-  .cpmp-tab-button.active {
-    border-right-color: #0073b1;
-    border-bottom: none;
-  }
-  .info-grid, .date-grid, .audience-grid {
+  .outcomes-grid, .audience-grid, .info-grid, .date-grid {
     grid-template-columns: 1fr;
   }
   .cpmp-info-bar {
@@ -698,73 +525,12 @@
           <tr><td>15:00 – 16:30</td><td>Lecture Session Four</td></tr>
         </table>
 
-        <!-- Upcoming Dates -->
+        <!-- Upcoming Dates (Only October date) -->
         <div class="section-title">UPCOMING DATES</div>
         <div class="date-grid">
           <div class="date-card">
-            <strong>10 – 12 June 2026</strong>
-            <span class="status">Open</span>
-          </div>
-          <div class="date-card">
             <strong>21 – 23 October 2026</strong>
             <span class="status">Open</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sidebar -->
-      <div class="cpmp-sidebar">
-        <div class="cpmp-sidebar-card">
-          <div class="intake-header">
-            <span class="intake-title">Next intake</span>
-            <span class="intake-date">21 – 23 October 2026</span>
-          </div>
-          <a href="#" class="btn-primary">Apply now</a>
-          <div class="sidebar-meta-list">
-            <div class="meta-list-item">
-              <span class="meta-list-label">Short Course Coordinator:</span>
-              <span class="meta-list-value">Career Excel Academy</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">Certification:</span>
-              <span class="meta-list-value">Certificate of Completion</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">ECSA CPD:</span>
-              <span class="meta-list-value">3.0 Credits (SAIMechE – 1763-05/28)</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">SACPCMP CPD:</span>
-              <span class="meta-list-value">2.10 Credits (SACPCMP/CPD/26/271)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cpmp-sidebar-card">
-          <h4 class="form-card-title">Request more information</h4>
-          <p class="form-card-subtitle">Please complete the following info:</p>
-          <form class="sidebar-form" onsubmit="event.preventDefault();">
-            <div class="form-group">
-              <input type="text" placeholder="First name" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Email address *" required class="form-control">
-            </div>
-            <button type="submit" class="btn-primary">Send</button>
-          </form>
-        </div>
-
-        <div class="cpmp-sidebar-card">
-          <h4 class="form-card-title">Downloads</h4>
-          <div class="download-links">
-            <a href="#" class="download-item">
-              <span class="pdf-icon">PDF</span>
-              <span class="download-text">Course Information Document</span>
-            </a>
-            <a href="#" class="download-item">
-              <span class="pdf-icon">PDF</span>
-              <span class="download-text">ECSA Validation Certificate</span>
-            </a>
           </div>
         </div>
       </div>
@@ -772,56 +538,66 @@
   </div>
 
   <!-- Tab 2: Outcomes -->
-  <div id="outcomes" class="cpmp-tab-content">
-    <div class="cpmp-grid">
-      <div class="cpmp-main-content">
-        <div class="section-title">PROGRAMME OUTCOMES</div>
-        <div class="outcomes-grid">
-          <div class="outcome-item">Introduction to Construction Project Management body of knowledge (PMBOK)</div>
-          <div class="outcome-item">Project Management</div>
-          <div class="outcome-item">Commercial & Construction contracts law</div>
-          <div class="outcome-item">Property Economics, Budgets and Life Cycle Costing</div>
-          <div class="outcome-item">Feasibility studies & investment</div>
-          <div class="outcome-item">Construction Contracts Law</div>
-          <div class="outcome-item">Construction & Professional insurance</div>
-          <div class="outcome-item">Estimation of construction cost</div>
-          <div class="outcome-item">Tendering Procedures</div>
-          <div class="outcome-item">Variation orders, interim certificates & final accounts</div>
-          <div class="outcome-item">Cash Flow Projections</div>
-          <div class="outcome-item">Utilisation of Subcontractors</div>
-          <div class="outcome-item">Site Management, plant & equipment</div>
-          <div class="outcome-item">Total Quality Management</div>
-          <div class="outcome-item">Risk Management</div>
-          <div class="outcome-item">Communication</div>
-          <div class="outcome-item">Marketing and Public Relations</div>
-          <div class="outcome-item">Public Private Partnerships</div>
-          <div class="outcome-item">Stakeholder Engagement</div>
-          <div class="outcome-item">Strategic Goal Alignment</div>
-          <div class="outcome-item">Predictive Maintenance</div>
-        </div>
+  <!-- Tab 2: Outcomes -->
+<div id="outcomes" class="cpmp-tab-content">
+  <div class="cpmp-grid">
+    <div class="cpmp-main-content">
+      <div class="section-title">PROGRAMME OUTCOMES</div>
+      <p class="cpmp-overview">
+        On successful completion of this programme, delegates will have covered the following topics:
+      </p>
 
-        <div class="section-title">DAILY TIME SCHEDULE</div>
-        <table class="schedule-table">
-          <tr><td>08:15 – 10:15</td><td>Lecture Session One</td></tr>
-          <tr><td>10:15 – 10:30</td><td>Break</td></tr>
-          <tr><td>10:30 – 12:30</td><td>Lecture Session Two</td></tr>
-          <tr><td>12:30 – 13:15</td><td>Lunch Break</td></tr>
-          <tr><td>13:15 – 14:45</td><td>Lecture Session Three</td></tr>
-          <tr><td>14:45 – 15:00</td><td>Break</td></tr>
-          <tr><td>15:00 – 16:30</td><td>Lecture Session Four</td></tr>
-        </table>
+      <div class="outcomes-grid">
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Introduction to Construction Project Management body of knowledge (PMBOK)</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Project Management principles and practice</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Commercial & Construction contracts law</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Property Economics, Budgets and Life Cycle Costing</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Feasibility studies & investment</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Construction Contracts Law</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Construction & Professional insurance</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Estimation of construction cost</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Tendering Procedures</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Variation orders, interim certificates & final accounts</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Cash Flow Projections</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Utilisation of Subcontractors</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Site Management, plant & equipment</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Total Quality Management</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Risk Management</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Communication, Marketing and Public Relations</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Public Private Partnerships</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Stakeholder Engagement</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Strategic Goal Alignment</div>
+        <div class="outcome-item"><span style="color: #0073b1;">✓</span> Predictive Maintenance</div>
       </div>
-      <div class="cpmp-sidebar">
-        <div class="cpmp-sidebar-card">
-          <div class="intake-header">
-            <span class="intake-title">Next intake</span>
-            <span class="intake-date">21 – 23 October 2026</span>
-          </div>
-          <a href="#" class="btn-primary">Apply now</a>
+
+      <div class="section-title">CERTIFICATE REQUIREMENTS</div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>📜 Certificate of Attendance</h4>
+          <p>Awarded to participants who attend the live sessions only.</p>
+        </div>
+        <div class="info-card">
+          <h4>📜 Certificate of Competence</h4>
+          <p>Awarded to participants who attended the live sessions, completed each module/assignment, and achieved a minimum score of 50%.</p>
+        </div>
+      </div>
+
+      <div class="section-title">CPD ACCREDITATION</div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>ECSA</h4>
+          <p style="font-size: 24px; font-weight: 700; color: #2d3748;">3.0 Credits</p>
+          <p>SAIMechE – 1763-05/28</p>
+        </div>
+        <div class="info-card">
+          <h4>SACPCMP</h4>
+          <p style="font-size: 24px; font-weight: 700; color: #2d3748;">2.10 Credits</p>
+          <p>SACPCMP/CPD/26/271</p>
         </div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- Tab 3: Requirements -->
   <div id="requirements" class="cpmp-tab-content">
@@ -896,129 +672,77 @@
           <p>A property development specialist with over two decades of experience in banking and construction. Currently a director at Innovative Consolidated Group, previously holding senior roles at Bigen Group and Calgro M3. His expertise includes advanced property finance and analytics.</p>
         </div>
       </div>
-      <div class="cpmp-sidebar">
-        <div class="cpmp-sidebar-card">
-          <div class="intake-header">
-            <span class="intake-title">Next intake</span>
-            <span class="intake-date">21 – 23 October 2026</span>
-          </div>
-          <a href="#" class="btn-primary">Apply now</a>
-          <div class="sidebar-meta-list">
-            <div class="meta-list-item">
-              <span class="meta-list-label">Coordinator:</span>
-              <span class="meta-list-value">Career Excel Academy</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">SAPOA Members:</span>
-              <span class="meta-list-value">R11 550</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">Online:</span>
-              <span class="meta-list-value">R9 950</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">Non-SAPOA:</span>
-              <span class="meta-list-value">R11 950</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">ECSA CPD:</span>
-              <span class="meta-list-value">3.0 Credits</span>
-            </div>
-            <div class="meta-list-item">
-              <span class="meta-list-label">SACPCMP CPD:</span>
-              <span class="meta-list-value">2.10 Credits</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
   <!-- Tab 4: Additional Information -->
-  <div id="additional-info" class="cpmp-tab-content">
-    <div class="cpmp-grid">
-      <div class="cpmp-main-content">
-        <div class="overview-text">
-          <strong style="color: #0073b1; font-size: 16px;">OVERVIEW</strong><br><br>
-          The Construction Project Management Programme (CPMP) aims to provide students with a comprehensive understanding of construction project management and its application in the built environment. The programme covers essential areas of project management and introduces students to specific construction project management applications.<br><br>
-          We offer a blended approach combining in-class and live synchronous sessions alongside interactive online materials. The involvement of both academic experts and experienced property professionals ensures a rich, practical learning experience tailored to Built Environment practitioners. The programme is presented at NQF Level 5 (first-year university level).
-        </div>
+  <!-- Tab 4: Additional Information -->
+<div id="additional-info" class="cpmp-tab-content">
+  <div class="cpmp-grid">
+    <div class="cpmp-main-content">
+      <div class="section-title">OVERVIEW</div>
+      <div class="overview-text">
+        The Construction Project Management Programme (CPMP) aims to provide students with a comprehensive understanding of construction project management and its application in the built environment. The programme covers essential areas of project management and introduces students to specific construction project management applications.<br><br>
+        We offer a blended approach combining in-class and live synchronous sessions alongside interactive online materials. The involvement of both academic experts and experienced property professionals ensures a rich, practical learning experience tailored to Built Environment practitioners. The programme is presented at NQF Level 5 (first-year university level).
+      </div>
 
-        <div class="section-title">FORMAT</div>
-        <div class="info-grid">
-          <div class="meta-grid-item">
-            <span class="meta-grid-label">FORMAT</span>
-            <p class="meta-grid-value">08:15–16:30 daily · In-person & Online</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="meta-grid-label">FORMAT</span>
+          <p class="meta-grid-value">08:15–16:30 daily · In-person & Online</p>
+        </div>
+        <div class="info-card">
+          <span class="meta-grid-label">PRICING</span>
+          <p class="meta-grid-value">SAPOA Members: R11 550 · Online: R9 950 · Non-SAPOA: R11 950</p>
+        </div>
+        <div class="info-card">
+          <span class="meta-grid-label">ACCREDITATION</span>
+          <p class="meta-grid-value">ECSA: 3.0 Credits · SACPCMP: 2.10 Credits</p>
+        </div>
+      </div>
+
+      <div class="section-title">Contact a Short Course Coordinator</div>
+      <div style="margin: 20px 0;">
+        <div style="display: flex; align-items: center; border: 1px solid #edf2f7; border-radius: 4px; padding: 16px 20px; margin-bottom: 12px; background: #fff; cursor: pointer;">
+          <div style="background: #e6f4f8; color: #0073b1; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 16px; flex-shrink: 0;">
+            📧
           </div>
-          <div class="meta-grid-item">
-            <span class="meta-grid-label">PRICING</span>
-            <p class="meta-grid-value">SAPOA Members: R11 550 · Online: R9 950 · Non-SAPOA: R11 950</p>
+          <div style="flex-grow: 1;">
+            <h4 style="margin: 0 0 4px 0; font-size: 15px; color: #2d3748; font-weight: 700;">Career Excel Academy</h4>
+            <p style="margin: 0; font-size: 13px; color: #718096;">Short Course Coordinator</p>
           </div>
-          <div class="meta-grid-item">
-            <span class="meta-grid-label">ACCREDITATION</span>
-            <p class="meta-grid-value">ECSA: 3.0 Credits · SACPCMP: 2.10 Credits</p>
+          <div style="color: #cbd5e0;">
+            ▼
           </div>
         </div>
-
-        <div class="coordinator-section">
-          <h3 class="block-heading">Contact a Short Course Coordinator</h3>
-          <div class="coordinator-card">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
-            <div class="card-details">
-              <h4>Career Excel Academy</h4>
-              <p>Short Course Coordinator</p>
-            </div>
-            <div class="card-arrow">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-            </div>
+        <div style="display: flex; align-items: center; border: 1px solid #edf2f7; border-radius: 4px; padding: 16px 20px; background: #fff; cursor: pointer;">
+          <div style="background: #e6f4f8; color: #0073b1; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 16px; flex-shrink: 0;">
+            📧
           </div>
-          <div class="coordinator-card">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
-            <div class="card-details">
-              <h4>SAPOA Partnership Desk</h4>
-              <p>Operations Manager</p>
-            </div>
-            <div class="card-arrow">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-            </div>
+          <div style="flex-grow: 1;">
+            <h4 style="margin: 0 0 4px 0; font-size: 15px; color: #2d3748; font-weight: 700;">SAPOA Partnership Desk</h4>
+            <p style="margin: 0; font-size: 13px; color: #718096;">Operations Manager</p>
+          </div>
+          <div style="color: #cbd5e0;">
+            ▼
           </div>
         </div>
       </div>
-      <div class="cpmp-sidebar">
-        <div class="cpmp-sidebar-card">
-          <h4 class="form-card-title">Request more information</h4>
-          <p class="form-card-subtitle">Please complete the following info:</p>
-          <form class="sidebar-form" onsubmit="event.preventDefault();">
-            <div class="form-group">
-              <input type="text" placeholder="First name" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Email address *" required class="form-control">
-            </div>
-            <button type="submit" class="btn-primary">Send</button>
-          </form>
-        </div>
 
-        <div class="cpmp-sidebar-card">
-          <h4 class="form-card-title">Downloads</h4>
-          <div class="download-links">
-            <a href="#" class="download-item">
-              <span class="pdf-icon">PDF</span>
-              <span class="download-text">Course Information Document</span>
-            </a>
-            <a href="#" class="download-item">
-              <span class="pdf-icon">PDF</span>
-              <span class="download-text">ECSA Validation Certificate</span>
-            </a>
-          </div>
-        </div>
-      </div>
+<div class="section-title">Downloads</div>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 15px 0;">
+  <a href="#" style="display: flex; align-items: center; text-decoration: none; color: #0073b1;">
+    <span style="background: #e53e3e; color: white; font-size: 10px; font-weight: 700; padding: 2px 5px; border-radius: 2px; margin-right: 10px;">PDF</span>
+    <span>Course Information Document</span>
+  </a>
+  <a href="#" style="display: flex; align-items: center; text-decoration: none; color: #0073b1;">
+    <span style="background: #e53e3e; color: white; font-size: 10px; font-weight: 700; padding: 2px 5px; border-radius: 2px; margin-right: 10px;">PDF</span>
+    <span>ECSA Validation Certificate</span>
+  </a>
+</div>
     </div>
   </div>
+</div>
 </div>
 
 <script>
@@ -1032,15 +756,22 @@ function showTab(tabId) {
   const buttons = document.querySelectorAll('.cpmp-tab-button');
   buttons.forEach(btn => btn.classList.remove('active'));
 
-  // Show selected tab and activate button
+  // Show selected tab
   document.getElementById(tabId).classList.add('active');
-  event.target.classList.add('active');
 
-  // Scroll to top of container
-  document.querySelector('.cpmp-tabs-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Find and activate the clicked button
+  const clickedBtn = Array.from(buttons).find(btn =>
+    btn.getAttribute('onclick').includes(tabId)
+  );
+  if (clickedBtn) clickedBtn.classList.add('active');
+
+  // Scroll to top
+  document.querySelector('.cpmp-tabs-container').scrollIntoView({
+    behavior: 'smooth', block: 'start'
+  });
 }
 
-// Initialize - show first tab on load
+// Initialize
 document.addEventListener('DOMContentLoaded', function() {
   showTab('course-content');
 });
